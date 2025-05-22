@@ -27,7 +27,17 @@ function likeOn(){
 // 5.좋아요 아이콘 한번 터치 시 좋아요(o), 다시 터치 시 좋아요 해제 반복 (x-조건문공부필요)
 //이미지 더블클릭 하기 전 기준
 
-likeImg.addEventListener('click',likeOn);
+//likeImg.addEventListener('click',likeOn);
+//(위) likeImg 클릭 시 실행되는 콜백함수
+//(아래) likeImg객체가 a태그로 클릭 시 새로고침되서 스크롤이 위로 올라가는 문제 해결을 위한 방법
+//콜백함수 호출이 아닌 익명함수 또는 화살표함수 이용필수
+//익명함수 또는 화살표함수로 작성 시 이벤트 앞 객체정보가 함수의 매개변수로 자동으로 대입된다.
+//위 매개변수가 받은 정보를 확인하려면 매개변수에 변수명(e)을 작성하고 console.log()로 확인할 수 있다.
+likeImg.addEventListener('click',function(e){
+    //console.log(e);
+    e.preventDefault();//태그의 동적기능 취소(a태그의 새로고침)
+    likeOn();
+});
 
 
 
