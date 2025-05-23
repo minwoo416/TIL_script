@@ -3,13 +3,19 @@ main {
     max-width:420px; min-width:320px; margin:30px auto 0;
     border:1px solid #000; border-radius:30px;
     text-align:center;
+    padding:0 0 30px;
+    background:pink url(https://i.pinimg.com/736x/ac/fa/fa/acfafaa21f2a658270a0d7ca5d52819b.jpg) center 47%/ cover;
+    
 }
 main h1 {
     font-size:1.25rem; font-weight:600; margin:20px 0 30px;}
 
-main p {background:yellow; font-size:1.125rem;}
+main p {font-size:1.125rem;}
 main .info {
-    background:pink; margin:50px 0; padding:20px 0;
+    width:350px;
+    margin:50px auto; padding:20px 0;
+    background-color:skyblue;
+    border-radius:20px;
 }
 main .info li {margin:20px 0;}
 main .info li span {}
@@ -18,5 +24,13 @@ main #result_btn {
     margin-bottom:20px; padding:5px;
     border:2px solid rgba(255,0,0,0.3);
     border-radius:10px;
+    background-color:#fff;
 }
-main #result{background-color:blue;}
+main #result{
+    border-bottom:1px solid red;
+    width:80%; height:40px;
+    margin:0 auto 30px;
+    color:#fff; font-size:1.25rem;
+}
+/* 자바스크립트에서 동적으로 생성한 HTML 꾸미기 속성 */
+main #result em {color:red;}
