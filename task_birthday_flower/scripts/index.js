@@ -49,7 +49,17 @@ const birthday_flower = [
         content:'축하, 감사'
     }
 ]
-const userMonth = document.querySelector('input[name=month]')
-const userBtn = document.querySelector('#btn button')
-userBtn.addEventListener('click',()=>{})
-console.log(userMonth, userBtn);
+const userMonth = document.querySelector('input[name=month]');
+const userBtn = document.querySelector('#btn button');
+const result = document.querySelector('.result');
+console.log(userMonth, userBtn, result);
+//console.log(birthday_flower[11].month) //인덱스.속성 값 확인인
+userBtn.addEventListener('click',()=>{
+    if(birthday_flower[11].month == userMonth.value){
+        result.style.display = 'block';
+        result.innerHTML = `${birthday_flower[11].month}월의 탄생화는 ${birthday_flower[11].flower}이고 꽃말은 ${birthday_flower[11].content}입니다.`
+
+    }
+})
+
+result.style.display = 'none' //초기 결과 숨기기기
