@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커플 날짜 계산기</title>
+    <link rel="stylesheet" href="../task_birthday_flower/styles/reset.css">
+    <style>
+        main {
+            background:url(https://i.pinimg.com/736x/8b/39/47/8b3947faf66cdf4157037f4a562aba17.jpg) center / cover; 
+            width:500px;height:500px;
+            margin:0 auto; padding:30px;
+            text-align:center;
+        }
+        main h1 {color:#fff; font-size:3rem; font-weight:800; margin-bottom:20px;}
+        main span {color:#fff; display:block; font-size:1.25rem;font-weight:600;}
+        main #coupledate {margin-top:30px; background:#ffc0cb;}
+        main #coupledate_btn {
+            font-size:0.875rem; margin-left:10px;
+            background-color:#ffc0cb;
+            padding:10px 20px; border-radius:15px;
+        }
+        main .result {
+            margin-top:100px;
+            background:rgba(255,255,255,0.4);
+            padding:10px;
+            border-radius:20px;
+        }
+        main .result p {}
+        main .result em {color:#f00; font-weight:700;}
+        main .result .date {}
+        main .result .date em {}
+        main .result .time {margin-top:20px;}
+        main .result .time em {}
+        
+    </style>
+    <script src="./scripts/Math_ex.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>커플 날짜 계산기</h1>
+        <span>사귄 날짜를 선택하세요</span>
+        <input type="date" id="coupledate" name="coupledate">
+        <button type="button" id="coupledate_btn">클릭</button>
+        <div class="result">
+            <p class="date">우리가 사귄지 <em></em>일 됐어요.</p>
+            <p class="time">우리가 사귄지 <em></em>시간이 됐어요.</p>
+        </div>
+    </main>
+</body>
+</html>
